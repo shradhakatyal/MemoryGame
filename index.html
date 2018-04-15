@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="modal">
+        <div class="inner-modal">
+            <span id="close-modal">&times;</span>
+            <p>Congratulations! You won!</p>
+            <p>Your star rating is:
+                <span id="rating"></span>
+            </p>
+            <p>Time taken to complete the game:
+                <span id="time"></span>seconds</p>
+            <p>Would you like to play again?
+                <span id='yes'> Yes!</span>
+                <span id='no'> No.</span>
+            </p>
+        </div>
+    </div>
+    <div class="header">
+        <h1>Memory Game</h1>
+    </div>
+    <div class="panel">
+        <div class="inner-pannel">
+            <div class="reset panel-item">
+                <button type="button" id='reset'>Reset</button>
+            </div>
+            <div class="timer panel-item">Time:
+                <span id='timer'>0</span>
+            </div>
+            <div class="star-rating panel-item">
+                Rating:
+                <i class="fa fa-star" id="star-1"></i>
+                <i class="fa fa-star" id="star-2"></i>
+                <i class="fa fa-star" id="star-3"></i>
+            </div>
+            <div class="moves-counter panel-item">
+                Moves:
+                <span id="counter">0</span>
+            </div>
+        </div>
+    </div>
+    <div class="tiles-container">
+        <div class="tile">
+            <div class="inner-tile"></div>
+        </div>
+        <div class="tile">
+            <div class="inner-tile"></div>
+        </div>
+        <div class="tile">
+            <div class="inner-tile"></div>
+        </div>
+        <div class="tile">
+            <div class="inner-tile"></div>
+        </div>
+        <div class="tile">
+            <div class="inner-tile"></div>
+        </div>
+        <div class="tile">
+            <div class="inner-tile"></div>
+        </div>
+        <div class="tile">
+            <div class="inner-tile"></div>
+        </div>
+        <div class="tile">
+            <div class="inner-tile"></div>
+        </div>
+        <div class="tile">
+            <div class="inner-tile"></div>
+        </div>
+        <div class="tile">
+            <div class="inner-tile"></div>
+        </div>
+        <div class="tile">
+            <div class="inner-tile"></div>
+        </div>
+        <div class="tile">
+            <div class="inner-tile"></div>
+        </div>
+        <div class="tile">
+            <div class="inner-tile"></div>
+        </div>
+        <div class="tile">
+            <div class="inner-tile"></div>
+        </div>
+        <div class="tile">
+            <div class="inner-tile"></div>
+        </div>
+        <div class="tile">
+            <div class="inner-tile"></div>
+        </div>
+
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+
+</html>
