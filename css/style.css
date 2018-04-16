@@ -102,8 +102,8 @@ p {
     box-sizing: border-box;
     border-radius: 30px;
 }
-.fa-question-circle {
-    font-size: 50px;
+.fa-star {
+    color: gold;
 }
 .opened-tile {
     background: blueviolet;
@@ -230,8 +230,8 @@ p {
         box-sizing: border-box;
         border-radius: 30px;
    }
-    .fa-question-circle {
-        font-size: 50px;
+    .fa-star {
+        color: gold;
    }
     .opened-tile {
         background: blueviolet;
@@ -356,8 +356,8 @@ p {
         box-sizing: border-box;
         border-radius: 10px;
    }
-    .fa-question-circle {
-        font-size: 50px;
+    .fa-star {
+        color: gold;
    }
     .opened-tile {
         background: blueviolet;
