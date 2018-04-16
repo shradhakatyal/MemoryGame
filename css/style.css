@@ -64,7 +64,6 @@ p {
     display: inline-block;
     width: 100%;
     background-color: rgb(245, 150, 9);
-    height: 50px;
 }
 
 .inner-panel {
@@ -75,12 +74,12 @@ p {
     width: 80%;
     display: inline-block;
     box-sizing: border-box;
-    height: 50px;
 }
 
 .panel-item {
     display: inline-block;
     float: left;
+    font-size: 24px;
     width: 25%;
     box-sizing: border-box;
     text-align: center;
