@@ -54,6 +54,7 @@ $('.tile').each(function (index) {
 $('.inner-tile').each(function (index) {
     $(this).attr('id', 'inner-tile-' + index);
     $(this).css('display', 'none');
+    $(this).prop('matched', false);
     randomColor()
 });
 
@@ -79,6 +80,9 @@ function resetGame() {
     updateMovesCounter();
     $('.inner-tile').each(function () {
         randomColor();
+    });
+    $('.tile').each(function() {
+        $(this).prop('matched', false);
     });
     $('#star-3').css('display', 'inline');
     $('#star-2').css('display', 'inline');
@@ -177,6 +181,9 @@ $('.tile').on('click', function () {
         startTimer();
         firstClick = false;
     }
+    if($(this).prop('matched') === true) {
+        return;
+    }
     updateStarRating();
     totalMoves++;
     updateMovesCounter();
@@ -190,8 +197,8 @@ $('.tile').on('click', function () {
                 gameWon();
             }
             else {
-                $('#' + temp[1]).click(false);
-                $('#' + temp[1]).click(false);
+                $('#' + temp[0]).prop('matched', true);
+                $('#' + temp[1]).prop('matched', true);
                 temp = [];
             }
         }
