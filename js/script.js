@@ -9,37 +9,38 @@ var bgColors = [];
 var copyArray = [];
 var timer;
 var colorArray = [{
-    color: '#0099cc',
-    'count': 2
-},
-{
-    'color': '#66ff66',
-    'count': 2
-},
-{
-    'color': '#cc33ff',
-    'count': 2
-},
-{
-    'color': '#333300',
-    'count': 2
-},
-{
-    'color': '#990000',
-    'count': 2
-},
-{
-    'color': '#ccff66',
-    'count': 2
-},
-{
-    'color': '#663300',
-    'count': 2
-},
-{
-    'color': '#6666ff',
-    'count': 2
-}];
+        color: '#0099cc',
+        'count': 2
+    },
+    {
+        'color': '#66ff66',
+        'count': 2
+    },
+    {
+        'color': '#cc33ff',
+        'count': 2
+    },
+    {
+        'color': '#333300',
+        'count': 2
+    },
+    {
+        'color': '#990000',
+        'count': 2
+    },
+    {
+        'color': '#ccff66',
+        'count': 2
+    },
+    {
+        'color': '#663300',
+        'count': 2
+    },
+    {
+        'color': '#6666ff',
+        'count': 2
+    }
+];
 
 // To create a deep copy of colorArray.
 
@@ -47,11 +48,11 @@ copyArray = JSON.parse(JSON.stringify(colorArray));
 
 // Assigning IDs to all the tiles
 
-$('.tile').each(function (index) {
+$('.tile').each(function(index) {
     $(this).attr('id', 'tile-' + index);
 });
 
-$('.inner-tile').each(function (index) {
+$('.inner-tile').each(function(index) {
     $(this).attr('id', 'inner-tile-' + index);
     $(this).css('display', 'none');
     $(this).prop('matched', false);
@@ -60,7 +61,7 @@ $('.inner-tile').each(function (index) {
 
 //Clicking the reset button calls a method that resets the game
 
-$('#reset').on('click', function () {
+$('#reset').on('click', function() {
     resetGame();
 });
 
@@ -78,7 +79,7 @@ function resetGame() {
     temp = [];
     bgColors = [];
     updateMovesCounter();
-    $('.inner-tile').each(function () {
+    $('.inner-tile').each(function() {
         randomColor();
     });
     $('.tile').each(function() {
@@ -96,7 +97,7 @@ function randomColor() {
     randomColorGenerator();
     cleanArray();
     i = 0;
-    $('.inner-tile').each(function () {
+    $('.inner-tile').each(function() {
         $(this).css('backgroundColor', bgColors[i]);
         i++;
     });
@@ -124,7 +125,7 @@ function randomColorGenerator() {
 // Function to clean the array of random colors, filters out falsy values.
 
 function cleanArray() {
-    bgColors = bgColors.filter(function (val) {
+    bgColors = bgColors.filter(function(val) {
         if (val) {
             return val;
         }
@@ -148,7 +149,7 @@ function updateStarRating() {
 
 function startTimer() {
     sec = 0;
-    timer = setInterval(function () {
+    timer = setInterval(function() {
         $('#timer').text(++sec);
     }, 1000);
 }
@@ -161,14 +162,14 @@ function updateMovesCounter() {
 
 // Functions for further action depending on whether the user clicks yes or no.
 
-$('#no').on('click', function () {
+$('#no').on('click', function() {
     $('.modal').css('display', 'none');
     $('body').css('overflow', 'auto');
     alert('Sorry to see you go..')
 });
 
 
-$('#yes').on('click', function () {
+$('#yes').on('click', function() {
     $('.modal').css('display', 'none');
     $('body').css('overflow', 'auto');
     resetGame();
@@ -176,12 +177,12 @@ $('#yes').on('click', function () {
 
 // on click function for the tiles
 
-$('.tile').on('click', function () {
+$('.tile').on('click', function() {
     if (firstClick) {
         startTimer();
         firstClick = false;
     }
-    if($(this).prop('matched') === true) {
+    if ($(this).prop('matched') === true) {
         return;
     }
     updateStarRating();
@@ -195,29 +196,25 @@ $('.tile').on('click', function () {
             numMatches++;
             if (numMatches === 8) {
                 gameWon();
-            }
-            else {
+            } else {
                 $('#' + temp[0]).prop('matched', true);
                 $('#' + temp[1]).prop('matched', true);
                 temp = [];
             }
-        }
-        else {
+        } else {
             $('#' + temp[0]).children().fadeOut('slow');
             $('#' + temp[1]).children().fadeOut('slow');
         }
         temp = [];
         isOpen = false;
-    }
-
-    else {
+    } else {
         isOpen = true;
         $(this).children().fadeIn('fast');
     }
 
 });
 
-$('#close-modal').on('click', function () {
+$('#close-modal').on('click', function() {
     $('.modal').css('display', 'none');
     $('body').css('overflow', 'auto');
     resetGame();
@@ -232,12 +229,10 @@ function gameWon() {
         $('#rating1').addClass('fa-star fa');
         $('#rating2').addClass('fa-star fa');
         $('#rating3').addClass('fa-star fa');
-    }
-    else if (totalMoves > 16 && totalMoves <= 24) {
+    } else if (totalMoves > 16 && totalMoves <= 24) {
         $('#rating1').addClass('fa-star fa');
         $('#rating2').addClass('fa-star fa');
-    }
-    else if (totalMoves > 24) {
+    } else if (totalMoves > 24) {
         $('#rating1').addClass('fa-star fa');
     }
     $('#time').text(sec);

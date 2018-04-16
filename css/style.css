@@ -3,12 +3,10 @@ html, body {
     margin: 0;
     font-family: 'Lato', sans-serif;
 }
-
 h1 {
     text-align: center;
     text-transform: uppercase;
 }
-
 .modal {
     top: 0;
     left: 0;
@@ -23,21 +21,17 @@ h1 {
     cursor: pointer;
     font-weight: bold;
 }
-
 #yes:hover {
     text-decoration: underline;
 }
-
 #no {
     cursor: pointer;
     color: red;
     font-weight: bold;
 }
-
 #no:hover {
     text-decoration: underline;
 }
-
 .inner-modal {
     position: absolute;
     left: 50%;
@@ -46,19 +40,16 @@ h1 {
     border: 1px solid white;
     background: white;
 }
-
 p {
     margin: 50px 50px;
     font-size: 32px;
 }
-
 #close-modal {
     float: right;
     font-size: 40px;
     cursor: pointer;
     margin-top: -10px;
 }
-
 .panel {
     position: absolute;
     top: 25%;
@@ -68,7 +59,6 @@ p {
     width: 100%;
     background-color: rgb(245, 150, 9);
 }
-
 .inner-panel {
     position: absolute;
     top: 50%;
@@ -78,7 +68,6 @@ p {
     display: inline-block;
     box-sizing: border-box;
 }
-
 .panel-item {
     display: inline-block;
     float: left;
@@ -87,12 +76,10 @@ p {
     box-sizing: border-box;
     text-align: center;
 }
-
 .tiles-container {
     margin: 15% auto;
     width: 50%;
 }
-
 .tile {
     background-color: rgb(245, 150, 9);
     display: inline-block;
@@ -118,7 +105,6 @@ p {
 .fa-question-circle {
     font-size: 50px;
 }
-
 .opened-tile {
     background: blueviolet;
     display: inline-block;
@@ -128,7 +114,6 @@ p {
     height: 200px;
     box-sizing: border-box;
 }
-
 #reset {
     background: transparent;
     border-radius: 5px;
@@ -138,22 +123,18 @@ p {
     cursor: pointer;
     outline: none;
 }
-
 #reset:hover {
     background: white;
     color: rgb(245, 150, 9);
 }
-
 #reset:active {
     outline: none;
 }
-
 @media (max-width: 768px) {
     h1 {
         text-align: center;
         text-transform: uppercase;
-    }
-    
+   }
     .modal {
         top: 0;
         left: 0;
@@ -163,26 +144,22 @@ p {
         width: 100%;
         position: absolute;
         background: rgba(0, 0, 0, 0.8);
-    }
+   }
     #yes {
         cursor: pointer;
         font-weight: bold;
-    }
-    
+   }
     #yes:hover {
         text-decoration: underline;
-    }
-    
+   }
     #no {
         cursor: pointer;
         color: red;
         font-weight: bold;
-    }
-    
+   }
     #no:hover {
         text-decoration: underline;
-    }
-    
+   }
     .inner-modal {
         position: absolute;
         left: 50%;
@@ -190,20 +167,17 @@ p {
         transform: translate(-50%, -50%);
         border: 1px solid white;
         background: white;
-    }
-    
+   }
     p {
         margin: 50px 50px;
         font-size: 24px;
-    }
-    
+   }
     #close-modal {
         float: right;
         font-size: 40px;
         cursor: pointer;
         margin-top: -10px;
-    }
-    
+   }
     .panel {
         position: absolute;
         top: 25%;
@@ -212,8 +186,7 @@ p {
         display: inline-block;
         width: 100%;
         background-color: rgb(245, 150, 9);
-    }
-    
+   }
     .inner-panel {
         position: absolute;
         top: 50%;
@@ -222,8 +195,7 @@ p {
         width: 80%;
         display: inline-block;
         box-sizing: border-box;
-    }
-    
+   }
     .panel-item {
         display: inline-block;
         float: left;
@@ -231,13 +203,11 @@ p {
         width: 25%;
         box-sizing: border-box;
         text-align: center;
-    }
-    
+   }
     .tiles-container {
         margin: 15% auto;
         width: 70%;
-    }
-    
+   }
     .tile {
         background-color: rgb(245, 150, 9);
         display: inline-block;
@@ -249,7 +219,7 @@ p {
         height: 110px;
         box-sizing: border-box;
         border-radius: 30px;
-    }
+   }
     .inner-tile {
         display: none;
         display: inline-block;
@@ -259,11 +229,10 @@ p {
         height: 110px;
         box-sizing: border-box;
         border-radius: 30px;
-    }
+   }
     .fa-question-circle {
         font-size: 50px;
-    }
-    
+   }
     .opened-tile {
         background: blueviolet;
         display: inline-block;
@@ -272,8 +241,7 @@ p {
         width: 25%;
         height: 200px;
         box-sizing: border-box;
-    }
-    
+   }
     #reset {
         background: transparent;
         border-radius: 5px;
@@ -281,21 +249,18 @@ p {
         box-sizing: border-box;
         border: none;
         cursor: pointer;
-    }
-    
+   }
     #reset:hover {
         background: white;
         color: rgb(245, 150, 9);
-    }
+   }
 }
-
 @media (max-width: 480px) {
     h1 {
         text-align: center;
         text-transform: uppercase;
         font-size: 24px;
-    }
-    
+   }
     .modal {
         top: 0;
         left: 0;
@@ -305,26 +270,22 @@ p {
         width: 100%;
         position: absolute;
         background: rgba(0, 0, 0, 0.8);
-    }
+   }
     #yes {
         cursor: pointer;
         font-weight: bold;
-    }
-    
+   }
     #yes:hover {
         text-decoration: underline;
-    }
-    
+   }
     #no {
         cursor: pointer;
         color: red;
         font-weight: bold;
-    }
-    
+   }
     #no:hover {
         text-decoration: underline;
-    }
-    
+   }
     .inner-modal {
         position: absolute;
         left: 50%;
@@ -332,20 +293,17 @@ p {
         transform: translate(-50%, -50%);
         border: 1px solid white;
         background: white;
-    }
-    
+   }
     p {
         margin: 30px 50px;
         font-size: 16px;
-    }
-    
+   }
     #close-modal {
         float: right;
         font-size: 30px;
         cursor: pointer;
         margin-top: -10px;
-    }
-    
+   }
     .panel {
         position: absolute;
         top: 25%;
@@ -354,8 +312,7 @@ p {
         display: inline-block;
         width: 100%;
         background-color: rgb(245, 150, 9);
-    }
-    
+   }
     .inner-panel {
         position: absolute;
         top: 50%;
@@ -364,8 +321,7 @@ p {
         width: 80%;
         display: inline-block;
         box-sizing: border-box;
-    }
-    
+   }
     .panel-item {
         display: inline-block;
         float: left;
@@ -373,13 +329,11 @@ p {
         width: 25%;
         box-sizing: border-box;
         text-align: center;
-    }
-    
+   }
     .tiles-container {
         margin: 30% auto;
         width: 90%;
-    }
-    
+   }
     .tile {
         background-color: rgb(245, 150, 9);
         display: inline-block;
@@ -391,7 +345,7 @@ p {
         height: 80px;
         box-sizing: border-box;
         border-radius: 10px;
-    }
+   }
     .inner-tile {
         display: none;
         display: inline-block;
@@ -401,11 +355,10 @@ p {
         height: 80px;
         box-sizing: border-box;
         border-radius: 10px;
-    }
+   }
     .fa-question-circle {
         font-size: 50px;
-    }
-    
+   }
     .opened-tile {
         background: blueviolet;
         display: inline-block;
@@ -414,8 +367,7 @@ p {
         width: 25%;
         height: 200px;
         box-sizing: border-box;
-    }
-    
+   }
     #reset {
         background: transparent;
         border-radius: 5px;
@@ -423,10 +375,9 @@ p {
         box-sizing: border-box;
         border: 1px dashed white;
         cursor: pointer;
-    }
-    
+   }
     #reset:hover {
         background: white;
         color: rgb(245, 150, 9);
-    }
+   }
 }
