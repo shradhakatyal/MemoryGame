@@ -106,7 +106,6 @@ function randomColor() {
 // Function that generates an array of random colors.
 
 function randomColorGenerator() {
-    console.log(copyArray);
     var index = Math.floor(Math.random() * copyArray.length);
     var lastIndex = copyArray.length - 1;
     if (copyArray[index].count > 0) {
@@ -178,40 +177,44 @@ $('#yes').on('click', function() {
 // on click function for the tiles
 
 $('.tile').on('click', function() {
-    if (firstClick) {
-        startTimer();
-        firstClick = false;
-    }
-    if ($(this).prop('matched') === true) {
-        return;
-    }
-    updateStarRating();
-    totalMoves++;
-    updateMovesCounter();
-    var id = $(this).attr('id');
-    temp.push(id);
-    if (isOpen) {
-        $(this).children().fadeIn('fast');
-        if ($('#' + temp[0]).children().css('backgroundColor') === $('#' + temp[1]).children().css('backgroundColor')) {
-            numMatches++;
-            if (numMatches === 8) {
-                gameWon();
-            } else {
-                $('#' + temp[0]).prop('matched', true);
-                $('#' + temp[1]).prop('matched', true);
-                temp = [];
-            }
-        } else {
-            $('#' + temp[0]).children().fadeOut('slow');
-            $('#' + temp[1]).children().fadeOut('slow');
+    if(!$(this).prop('clicked')) {
+        $(this).prop('clicked', true);
+        if (firstClick) {
+            startTimer();
+            firstClick = false;
         }
-        temp = [];
-        isOpen = false;
-    } else {
-        isOpen = true;
-        $(this).children().fadeIn('fast');
+        if ($(this).prop('matched') === true) {
+            return;
+        }
+        updateStarRating();
+        totalMoves++;
+        updateMovesCounter();
+        var id = $(this).attr('id');
+        temp.push(id);
+        if (isOpen) {
+            $(this).children().fadeIn('fast');
+            if ($('#' + temp[0]).children().css('backgroundColor') === $('#' + temp[1]).children().css('backgroundColor')) {
+                numMatches++;
+                if (numMatches === 8) {
+                    gameWon();
+                } else {
+                    $('#' + temp[0]).prop('matched', true);
+                    $('#' + temp[1]).prop('matched', true);
+                    temp = [];
+                }
+            } else {
+                $('#' + temp[0]).children().fadeOut('slow');
+                $('#' + temp[1]).children().fadeOut('slow');
+                $('#' + temp[0]).prop('clicked', false);
+                $('#' + temp[1]).prop('clicked', false);
+            }
+            temp = [];
+            isOpen = false;
+        } else {
+            isOpen = true;
+            $(this).children().fadeIn('fast');
+        }
     }
-
 });
 
 $('#close-modal').on('click', function() {

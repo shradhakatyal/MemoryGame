@@ -1,5 +1,11 @@
 # Memory Game
 
+## About
+
+This game has been created using html, css and jQuery. There are no dependencies required to run this project. Simply download all the files. Run index.html to play the game. This game can
+be played on all browsers - Chrome, Safari, Firefox, Edge and IE versions 10 and 11.
+
+
 ## How to play
 
 This is a simple memory game. There are 16 cards, with 8 cards having similar hidden color.
