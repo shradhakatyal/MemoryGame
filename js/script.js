@@ -192,6 +192,10 @@ $('.tile').on('click', function() {
         var id = $(this).attr('id');
         temp.push(id);
         if (isOpen) {
+            $('.inner-tile').each(function() {
+                $(this).addClass('disabled');
+                i++;
+            });
             $(this).children().fadeIn('fast');
             if ($('#' + temp[0]).children().css('backgroundColor') === $('#' + temp[1]).children().css('backgroundColor')) {
                 numMatches++;
@@ -203,8 +207,8 @@ $('.tile').on('click', function() {
                     temp = [];
                 }
             } else {
-                $('#' + temp[0]).children().fadeOut('slow');
-                $('#' + temp[1]).children().fadeOut('slow');
+                $('#' + temp[0]).children().fadeOut(1000);
+                $('#' + temp[1]).children().fadeOut(1000);
                 $('#' + temp[0]).prop('clicked', false);
                 $('#' + temp[1]).prop('clicked', false);
             }
